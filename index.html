@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GOD TIER LEGEND SITE</title>
+<style>
+/* BODY + MATRIX */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: #00ffea;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  background: rgba(0,0,0,0.9);
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid cyan;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: cyan;
+  margin: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  text-shadow: 0 0 20px cyan, 0 0 40px #00fff7;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px cyan; }
+  to { text-shadow: 0 0 50px #00fff7; }
+}
+
+.btn {
+  padding: 15px 30px;
+  border: 2px solid cyan;
+  background: transparent;
+  color: cyan;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: cyan;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* CARDS */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(0,255,255,0.05);
+  margin: 15px;
+  padding: 20px;
+  width: 260px;
+  border-radius: 15px;
+  border: 1px solid cyan;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px cyan;
+}
+
+/* ROBLOX FRAME */
+iframe {
+  width: 80%;
+  height: 500px;
+  border: 2px solid cyan;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid cyan;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#games">Games</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>⚡ GOD TIER LEGEND ⚡</h1>
+  <p>You entered the ultimate hacker-gaming zone 💻🎮</p>
+  <button class="btn" onclick="goToGames()">ENTER</button>
+</section>
+
+<!-- GAMES -->
+<section id="games">
+  <h1>🎮 Games</h1>
+  <div class="container">
+    <div class="card" onclick="openGame()">
+      <h2>🔥 Play My Roblox Game</h2>
+      <p>Click to play inside the site</p>
+    </div>
+
+    <div class="card" onclick="alert('More games coming soon 😎')">
+      <h2>⚡ Coming Soon</h2>
+    </div>
+  </div>
+
+  <!-- ROBLOX EMBED -->
+  <iframe src="https://www.roblox.com/games/1234567890" allowfullscreen></iframe>
+  <!-- 🔥 CHANGE the number 1234567890 to your game ID -->
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h1>💬 Contact</h1>
+  <button class="btn" onclick="joinDiscord()">Join Discord</button>
+</section>
+
+<footer>
+  <p>© 2026 GOD TIER LEGEND SITE</p>
+</footer>
+
+<script>
+function goToGames() {
+  document.getElementById("games").scrollIntoView({behavior: "smooth"});
+}
+
+function openGame() {
+  const gameID = "1234567890"; // 🔥 Put your Roblox game ID here
+  window.open(`https://www.roblox.com/games/${gameID}`, "_blank");
+}
+
+function joinDiscord() {
+  window.open("https://discord.com", "_blank"); // 🔥 Put your Discord link here
+}
+</script>
+
+</body>
+</html>
